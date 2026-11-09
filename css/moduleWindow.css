@@ -1,0 +1,103 @@
+.ModuleWindow {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+}
+
+.ModuleWindow__container {
+    position: absolute;
+    z-index: 1;
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.LanguageWindow {
+    position: fixed;
+    inset: 0;
+    z-index: 101;
+}
+
+.LanguageWindow__container {
+    position: absolute;
+    z-index: 1;
+    width: min(400px, calc(100vw - 32px));
+    min-height: 160px;
+    padding: 28px 20px 20px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.language-dialog__title {
+    font-size: 24px;
+}
+
+.language-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.language-link.button {
+    width: 150px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.language-link[aria-current="page"] {
+    border: 4px solid #e28989;
+}
+
+.language-window__close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    color: #404040;
+    font-size: 24px;
+}
+
+.ModuleWindow__button {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    color: #404040;
+    font-size: 24px;
+}
+
+.backround,
+.language-window__backround {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.54);
+}

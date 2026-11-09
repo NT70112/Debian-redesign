@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-locale="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debian</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/moduleWindow.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="module-window__container"></div>
+        <div class="module-window-language__container"></div>
+        <header class="header">
+            <div class="header-top">
+            </div>
+        </header>
+        <section class="download-page">
+            <div class="container">
+                <div class="download-page__inner">
+                    <h1 class="download-page__title title">Install the latest version of Debian</h1>
+                    <a href="#" download="debian.txt"
+                        class="download-page__download-button button"><span>Download</span></a>
+                    <a class="download-page__link link">Try Debian live before installing</a>
+                </div>
+            </div>
+        </section>
+        <section class="prev-releases">
+            <div class="container">
+                <div class="prev-releases__inner">
+                    <h2 class="prev-releases__title title__h2">Previous releases:</h2>
+                    <ul class="prev-releases__list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/burgerAction.js"></script>
+<script src="./js/modules.js"></script>
+<script src="./js/appendVersions.js"></script>
+<script src="js/download-page.js"></script>
+
+</html>

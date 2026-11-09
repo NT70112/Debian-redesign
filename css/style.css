@@ -1,0 +1,898 @@
+html,
+body {
+    font-size: 16px;
+    font-family: 'NTSomicRegular', sans-serif;
+    color: #1F1F1F;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1164px;
+    padding: 0 18px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header-top__mobile-menu {
+    display: none;
+}
+
+.burger-menu__container {
+    cursor: pointer;
+    width: 24px;
+    height: 16px;
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+.burger-menu__element {
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 24px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    opacity: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.burger-menu__element::before,
+.burger-menu__element::after {
+    content: '';
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 24px;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease, top 0.2s ease;
+}
+
+.burger-menu__element::before {
+    top: -5px;
+}
+
+.burger-menu__element::after {
+    top: 5px;
+}
+
+.burger-menu__container.burgerMenuOpen .burger-menu__element {
+    background-color: transparent;
+}
+
+.burger-menu__container.burgerMenuOpen .burger-menu__element::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu__container.burgerMenuOpen .burger-menu__element::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.header-top__mobile-menu__container {
+    display: block;
+    max-width: 400px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.burger-menu-bg {
+    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* -----------------------header-top--------------------- */
+
+.change-language__button {
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    margin-top: 12px;
+}
+
+.header-top {}
+
+.header-top__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.debian-logo {
+    margin-right: 420px;
+    margin-left: 0;
+}
+
+.header-top__nav {}
+
+.nav-list {
+    display: flex;
+    column-gap: 28px;
+    margin-right: 55px;
+}
+
+.nav-list__item {}
+
+.search-bar {
+    border: 1px solid #464646;
+    border-radius: 17px;
+    min-width: 289px;
+    height: 33px;
+    background: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+.search-bar__button {
+    position: absolute;
+    border-radius: 17px;
+    width: 80px;
+    height: 33px;
+    background: #404040;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    color: #fff;
+}
+
+.search-bar svg {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(50%);
+}
+
+.search {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    border-radius: 17px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.change-language__icon {
+    margin-left: 33px;
+}
+
+/* ----------------------------header-body-------------------------------- */
+
+.header-body {
+    margin-top: 75px;
+}
+
+.header-body__inner {
+    display: flex;
+}
+
+.header-body__content {
+    margin-right: 123px;
+}
+
+.header-body__title {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'NTSomicMedium', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #000;
+}
+
+.description {
+    font-family: 'NTSomicRegular', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+}
+
+.description span {
+    font-family: 'NTSomicMedium', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+}
+
+
+.button {
+    display: block;
+    border-radius: 40px;
+    width: 232px;
+    height: 66px;
+    background: #c75467;
+    font-family: 'NTSomicMedium', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.header-body__download-button {
+    margin-top: 26px;
+    position: relative;
+}
+
+.button:hover {
+    box-shadow: 0 0 8px 1px #c75467;
+    transform: translateY(-2px);
+}
+
+.button span {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-body__download-button::after {
+    content: "*страница загрузки";
+    position: absolute;
+    top: 68px;
+    left: 25%;
+    font-family: 'NTSomicRegular', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #505050;
+}
+
+
+.link {
+    display: block;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #464646;
+    cursor: pointer;
+}
+
+
+.header-body__link {
+    margin-top: 72px;
+}
+
+
+
+.header-body__image {}
+
+
+/* --------------------------main-questions------------------------------- */
+
+.Main_questions {
+    margin-top: 75px;
+}
+
+/* -----------------------------Accordion---------------------------------- */
+
+.Accordion {}
+
+.Accordion-iteam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 52px;
+    display: flex;
+    cursor: pointer;
+}
+
+.Accordion-iteam:first-child::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: -26px;
+}
+
+
+.Accordion-iteam span {
+    margin-right: 19px;
+}
+
+.Accordion-iteam::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    bottom: -26px;
+}
+
+.Accordion-iteam__name {
+    font-size: 20px;
+}
+
+.Accordion-iteam__decription {
+    font-size: 16px;
+    max-width: 920px;
+    margin-top: 16px;
+    display: none;
+}
+
+/* .invisible{
+    display: none;
+} */
+
+.Accordion-iteam__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-icon--active {
+    transform: rotate(180deg);
+}
+
+
+/*------------------------------community---------------------------------- */
+
+.community {
+    margin-top: 74px;
+}
+
+.community__inner {
+    margin-top: 38px;
+    display: flex;
+    column-gap: 56px;
+}
+
+.community__image {
+    margin-bottom: 120px;
+}
+
+.community__content {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.community__description {
+    max-width: 240px;
+}
+
+.description {}
+
+.community__accordion {}
+
+.Accordion {}
+
+.Accordion-iteam {}
+
+.Accordion-iteam__text {}
+
+.Accordion-iteam__name {}
+
+.Accordion-iteam__decription {}
+
+/*-----------------------------------news-----------------------------------*/
+
+.news {
+    margin-top: 74px;
+    margin-bottom: 120px;
+}
+
+.news__slider {
+    position: relative;
+}
+
+.news__toolbar {}
+
+.news__tabs {
+    display: flex;
+    column-gap: 19px;
+    position: relative;
+    width: 100%;
+    height: 28px;
+}
+
+.news__tabs::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    width: 100%;
+    height: 1px;
+    background-color: #d1d1d1;
+}
+
+.news__tab {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 116px;
+    color: #777;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.news__tab::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    background-color: #d1d1d1;
+}
+
+.news__tab--active {
+    color: #cc2f2f;
+}
+
+.news__tab--active::after {
+    background-color: #cc2f2f;
+}
+
+.news__controls {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96px;
+    height: 25px;
+}
+
+.news__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    background: none;
+}
+
+.news__arrow svg {
+    width: 8px;
+    height: auto;
+}
+
+.news__arrow--left svg {
+    transform: rotate(90deg);
+}
+
+.news__arrow--right svg {
+    transform: rotate(-90deg);
+}
+
+.news__viewport {
+    overflow: hidden;
+    margin-top: 31px;
+}
+
+.news__track {
+    display: flex;
+    gap: 39px;
+    width: max-content;
+    padding: 0 3px;
+    transition: all 0.64s;
+}
+
+.news__card {
+    flex: 0 0 422px;
+    width: 422px;
+    height: 272px;
+    background-color: #f1f1f1;
+}
+
+.news__card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 144px;
+    background-color: #ddd;
+    color: #000;
+    font-family: 'NTSomicMedium', sans-serif;
+    font-size: 36px;
+}
+
+.news__card-content {
+    padding: 12px;
+}
+
+.news__card-title {
+    margin-bottom: 1px;
+    color: #000;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.news__card-date {
+    display: block;
+    color: #4f4e4e;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.news__card-description {
+    margin-top: 7px;
+    color: #4f4e4e;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.news__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 49px auto 0;
+    width: max-content;
+    height: 8px;
+}
+
+.news__dot {
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+}
+
+.news__dot--active {
+    background-color: #777;
+}
+
+.not-active {
+    pointer-events: none;
+}
+
+/* ---------------------------footer----------------------------- */
+
+.footer {
+    border-top: 1px solid;
+    border-color: #464646;
+    background-color: #DDDDDD;
+    height: 100%;
+}
+
+.container {}
+
+.footer__inner {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 20px;
+}
+
+.footer__row {
+    display: flex;
+    gap: 18px;
+    font-size: 12px;
+    max-width: 700px;
+    line-height: 18px;
+}
+
+.footer__row span a {
+    text-decoration: underline;
+    color: #464646;
+    cursor: pointer;
+}
+
+
+/* ------------------------------download-page----------------------------------- */
+
+
+.download-page {}
+
+.download-page__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 190px;
+}
+
+.download-page__title {
+    text-align: center;
+}
+
+.download-page__download-button {
+    margin-top: 48px;
+}
+
+.download-page__link {
+    margin-top: 36px;
+}
+
+.prev-releases {
+    margin-top: 200px;
+}
+
+.prev-releases__inner {}
+
+.prev-releases__title {
+    font-family: 'NTSomicMedium', sans-serif;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 48px;
+}
+
+.title__h2 {}
+
+.prev-releases__list {
+    margin-bottom: 48px;
+}
+
+.prev-releases__list-iteam {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 26px;
+    align-items: center;
+}
+
+.prev-releases__text {}
+
+.prev-releases__list-iteam__name {
+    font-size: 16px;
+    color: #000;
+}
+
+.prev-releases__list-iteam__size {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #464646;
+}
+
+.prev-releases__download-button {
+    width: 120px;
+    height: 46px;
+    font-size: 12px;
+}
+
+
+.prev-releases__list-iteam:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: -12px;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+@media (max-width: 1225px) {
+    .debian-logo {
+        margin-right: 0;
+    }
+
+    .header-top {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ------------------------------------ */
+}
+
+
+@media (max-width: 1024px) {
+    .header-body__download-button {
+        display: block;
+        margin: 72px auto 0 auto;
+        text-align: center;
+    }
+
+    .header-top__nav {
+        display: none;
+    }
+
+    .header-body__inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .header-body__image {
+        margin-top: 20px;
+    }
+
+    .header-body__content {
+        margin-right: 0;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .description span {
+        font-size: 18px;
+    }
+
+    /* ------------------------ */
+
+    .community__inner {
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+
+    .community__image {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .debian-logo {
+        display: none;
+    }
+
+    .debian-logo__burger {
+        display: block;
+        margin-top: 80px;
+        margin-right: 80px;
+    }
+
+    .burger-menu__container {
+        display: flex;
+        pointer-events: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .header-top__mobile-menu {
+        display: block;
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: 400px;
+        height: 100vh;
+        height: 100dvh;
+        z-index: 100;
+        pointer-events: none;
+    }
+
+    .change-language__button {
+        margin-left: auto;
+        margin-top: 13px;
+    }
+
+    .header-top__mobile-menu__container {
+        display: none;
+        padding-left: 30px;
+        pointer-events: auto;
+    }
+
+    /* ------------------------------------ */
+    .news__controls {
+        width: 64px;
+    }
+
+    .news__tab {
+        width: auto;
+        font-size: 13px;
+    }
+
+    .news__tabs {
+        column-gap: 14px;
+    }
+
+    .news__track {
+        width: 100%;
+    }
+
+    .news__card {
+        flex-basis: calc(100% - 6px);
+        width: calc(100% - 6px);
+        height: 300px;
+
+    }
+
+    .news__card-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        /* число видимых строк */
+        overflow: hidden;
+        line-height: 1.4;
+        margin-right: 13px;
+    }
+
+    .header-body__image img {
+        width: 95%;
+    }
+
+
+
+    .search-bar {
+        display: none;
+    }
+
+
+    /* ------------------------ */
+
+    .community__image img {
+        width: 95%;
+    }
+
+    /* ------------------------------------- */
+    .download-page__inner {
+        margin-top: 75px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .button {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .description span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        max-width: 300px;
+    }
+
+    .header-body__title {
+        margin-right: 0;
+        margin-inline: auto;
+    }
+}
+
+
+.invisible {
+    display: none;
+}
+
+.header-top__backround {
+    width: 100%;
+}

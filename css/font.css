@@ -1,0 +1,15 @@
+@font-face {
+    font-family: NTSomicMedium;
+    src: local('NTSomic-Medium'),
+        url('../fonts/NTSomic-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NTSomicRegular;
+    src: local('NTSomic-Regular'),
+        url('../fonts/NTSomic-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
